@@ -76,5 +76,14 @@ namespace CarLibrary
             Seats = random.Next(0, 100);
             MaxSpeed = random.Next(0, 400);
         }
+
+        // Метод для возврата объекта базового класса
+        public Car GetBase
+        {
+            get
+            {
+                return new Car(this.Brand, this.Year, this.Color, this.Price, this.Clearance, this.idNumber);
+            }
+        }
     }
 }
